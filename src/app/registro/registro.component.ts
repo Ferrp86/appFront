@@ -18,7 +18,7 @@ export class RegistroComponent implements OnInit {
       email: new FormControl('', [Validators.required]),
       fecha_nacimiento: new FormControl('', [Validators.required]),
       nombre_usuario: new FormControl('', [Validators.required]),
-      contraseña: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required]),
       
     })
    }
