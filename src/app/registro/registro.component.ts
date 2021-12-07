@@ -12,11 +12,14 @@ export class RegistroComponent implements OnInit {
 
   constructor() {
     this.formulario = new FormGroup({
-      first_name: new FormControl('', [Validators.required]),
-      last_name: new FormControl('', [Validators.required]),
-      username: new FormControl('', [Validators.required]),
+      nombre: new FormControl('', [Validators.required]),
+      primer_apellido: new FormControl('', [Validators.required]),
+      segundo_apellido: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required]),
-      image: new FormControl(''),
+      fecha_nacimiento: new FormControl('', [Validators.required]),
+      nombre_usuario: new FormControl('', [Validators.required]),
+      contraseña: new FormControl('', [Validators.required]),
+      
     })
    }
 
