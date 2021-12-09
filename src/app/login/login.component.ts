@@ -24,7 +24,10 @@ export class LoginComponent implements OnInit {
   }
 
 
-  onSubmit() { }
+  onSubmit() {
+    console.log('Hacemos el login');
+
+  }
 
   checkError(controlName: string, error: string): boolean {
     return this.formulario.get(controlName)!.hasError(error) && this.formulario.get(controlName)!.touched;
