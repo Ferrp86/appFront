@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     console.log('Hacemos el login');
-
   }
 
   checkError(controlName: string, error: string): boolean {
