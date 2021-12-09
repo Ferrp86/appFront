@@ -7,17 +7,19 @@ import { AppComponent } from './app.component';
 import { RegistroComponent } from './registro/registro.component';
 import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './index/index.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
     HomeComponent,
-    IndexComponent
+    IndexComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     ReactiveFormsModule,
     FormsModule
   ],
