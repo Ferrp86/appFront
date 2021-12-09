@@ -17,3 +17,8 @@
 .form-control{
     border: 3px solid teal;
 }
+
+.error{
+    color: tomato;
+    font-size: 10px;
+}
