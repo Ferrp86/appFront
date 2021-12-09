@@ -1,0 +1,65 @@
+
+/* HEADER */
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    display: flex;
+}
+
+
+.botones{
+    color:white;
+    display: flex;
+    cursor: pointer;
+}
+
+.botonHome{
+    margin-right: 50px;
+}
+
+.botonRegistro{
+margin-right: 50px;
+}
+
+.botonLogin{
+    margin-right: 50px;
+}
+
+.botonPerfil{
+    margin-right: 50px;
+}
+
+
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: teal;
+}
+
