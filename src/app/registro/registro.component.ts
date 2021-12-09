@@ -19,17 +19,17 @@ export class RegistroComponent implements OnInit {
       fecha_nacimiento: new FormControl('', [Validators.required]),
       nombre_usuario: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required]),
-      
+
     })
-   }
+  }
 
   ngOnInit(): void {
   }
 
-  
+
   onSubmit() {
     console.log('envío de registro');
-  
+
   }
 
 }
