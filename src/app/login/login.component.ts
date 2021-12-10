@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UsuariosService } from '../usuarios.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,9 @@ export class LoginComponent implements OnInit {
 
   formulario: FormGroup;
 
-  constructor() {
+  constructor(
+    private usuariosService: UsuariosService
+  ) {
     this.formulario = new FormGroup({
       email: new FormControl('', [
         Validators.required,
@@ -25,6 +28,9 @@ export class LoginComponent implements OnInit {
 
 
   onSubmit() {
+    // this.usuariosService.login(this.formulario.value)
+    //   .then((response) => { })
+    //   .catch((error) => { });
     console.log('Hacemos el login');
   }
 

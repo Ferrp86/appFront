@@ -5,6 +5,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', component: HomeComponent},
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent }
