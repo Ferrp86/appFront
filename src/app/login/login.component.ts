@@ -28,10 +28,14 @@ export class LoginComponent implements OnInit {
 
 
   onSubmit() {
-    // this.usuariosService.login(this.formulario.value)
-    //   .then((response) => { })
-    //   .catch((error) => { });
-    console.log('Hacemos el login');
+    this.usuariosService.login(this.formulario.value)
+      .then((response) => {
+        console.log(response);
+        console.log('Hacemos el login');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   checkError(controlName: string, error: string): boolean {

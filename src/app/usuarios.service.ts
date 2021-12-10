@@ -1,25 +1,18 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Usuario } from './interface/usuario.interface';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuariosService {
 
+  private baseUrl: string;
+
   constructor(
-    private httpClient: HttpClient
-  ) {
-    // Aquí iría la URL de la API (DE EXPRESS)
-    // this.baseUrl = 'http//' 
+    private httpClient: HttpClient) {
+    this.baseUrl = 'http://localhost:3000/api/usuarios';
   }
-
-  // getUsuario(){
-  //   return this.httpClient
-  //   .get(this.baseUrl)
-  //   .toPromise();
-  // }
-
 
   // registrarUsuario(body: Usuario) {
   //   return this.httpClient
@@ -27,12 +20,15 @@ export class UsuariosService {
   //     .toPromise();
   // }
 
-  // login(body: { email: string, password: string }) {
-  //   return this.httpClient
-  //     .post(`${this.baseUrl}/login`, body)
-  //     .toPromise();
+  login(body: { email: string, password: string }) {
 
-  // }
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json'
+      })
+    }
+    return this.httpClient.post(`${this.baseUrl}/login`, body, httpOptions).toPromise();
+  }
 
 
 }
