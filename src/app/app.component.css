@@ -1,4 +1,14 @@
 .container{
     margin: 0 auto;
-    padding: 90px;
+}
+
+
+/* Responsive movil*/
+
+
+@media(max-width: 64.75em){
+    .body{
+        background-color: black;
+        height: 100vh;
+    }
 }

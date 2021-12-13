@@ -9,14 +9,17 @@ import { RegistroComponent } from './registro/registro.component';
 import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './login/login.component';
-
+import { PerfilComponent } from './perfil/perfil.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
     HomeComponent,
     IndexComponent,
-    LoginComponent
+    LoginComponent,
+    PerfilComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
