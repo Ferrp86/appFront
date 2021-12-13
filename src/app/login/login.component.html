@@ -1,26 +1,29 @@
-<div class="container col-12 col-md-4 paddingHeader">
-    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="text-center row">
-        <div class="mb-3 col-12 col-md-6">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-control" formControlName="email" placeholder="Email">
-            <p class="error" *ngIf="checkError('email', 'required')">
-                * El email es requerido
-            </p>
-            <p class="error" *ngIf="checkError('email', 'pattern')">
-                * El email debe tener formato correcto
-            </p>
-        </div>
 
-        <div class="mb-3 col-12 col-md-6">
-            <label class="form-label">Contraseña</label>
-            <input type="text" class="form-control" formControlName="password" placeholder="Password">
-            <p class="error" *ngIf="checkError('password', 'required')">
-                * El password es requerido
-            </p>
-        </div>
+    <div class="container col-12 col-md-4 paddingHeader">
 
-        <div class="mb-3">
-            <input type="submit" class="btn btn-primary button" value="Enviar">
-        </div>
-    </form>
-</div>
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="text-center row">
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="Email">
+                <p class="error" *ngIf="checkError('email', 'required')">
+                    * El email es requerido
+                </p>
+                <p class="error" *ngIf="checkError('email', 'pattern')">
+                    * El email debe tener formato correcto
+                </p>
+            </div>
+
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Contraseña</label>
+                <input type="text" class="form-control" formControlName="password" placeholder="Password">
+                <p class="error" *ngIf="checkError('password', 'required')">
+                    * El password es requerido
+                </p>
+            </div>
+
+            <div class="mb-3">
+                <input type="submit" class="btn btn-primary button" value="Enviar">
+            </div>
+        </form>
+    </div>
+

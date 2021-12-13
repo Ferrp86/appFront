@@ -1,4 +1,4 @@
-<div class="container col-12 col-md-6 paddingHeader ">
+<div class="container col-12 col-md-6 paddingHeader" style="filter:alpha(opacity=80); opacity:0.8;">
     <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="text-center row  " novalidate>
         <div class="mb-3 col-12 col-md-6">
             <label class="form-label">Nombre</label>
@@ -61,4 +61,11 @@
             <input type="submit" class="btn btn-primary button" [disabled]="!formulario.valid">
         </div>
     </form>
+</div>
+
+<div class="heroVideo">
+    <video class="video" autoplay loop type="video/mp4">
+        <source src="../../assets/VIDEOS/Dj - 1257 (1).mp4" type="video/mp4" />
+    </video>
+
 </div>

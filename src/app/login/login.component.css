@@ -1,12 +1,28 @@
-.paddingHeader{
-    padding-top: 100px;
+.heroVideo{
+    width: 100%;
     }
     
+.video{
+    width: 100%;
+    filter: grayscale(100%);
+}
+    
+
+.paddingHeader{
+    padding-top: 100px;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 1;
+    margin-left: 35%;
+    }
+    
+
 form{
     background-color: black;
     color: white;
-    border: 5px solid rgb(0, 153, 255);
+    border: 2px solid rgb(0, 153, 255);
     padding: 10px;
+
 }
 
 
@@ -28,6 +44,6 @@ form{
 }
 
 .form-control{
-    border: 3px solid rgb(0, 153, 255);
+    border: 2px solid rgb(0, 153, 255);
 }
 
