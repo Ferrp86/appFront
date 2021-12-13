@@ -1,5 +1,9 @@
 
 /* HEADER */
+.fas{
+    color: white;
+    font-size: 12px;
+}
 
 header{
     position: fixed;
@@ -14,12 +18,15 @@ header{
 
 .containerHeader{
     display: flex;
+    
 }
 
 .botones{
     color:white;
     display: flex;
     cursor: pointer;
+    width: 550px;
+    
 }
 
 .botonHome{
@@ -40,7 +47,7 @@ margin-right: 50px;
 
 .logo{
     height: 35px;
-    margin-left: 800px
+    margin-left: 750px
 }
 
 
