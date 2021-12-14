@@ -4,7 +4,8 @@
     
 .video{
     width: 100%;
-    filter: brightness(50%);
+    filter: brightness(70%);
+
     
 }
    
@@ -21,9 +22,11 @@ form{
     
     color: white;
     background-color: black;
-    filter: opacity(70%);
+    filter: brightness(80%);
     padding: 10px; 
 }
+
+
 
 .button{
 
@@ -36,7 +39,7 @@ form{
 }
 
 .form-control{
-    border: 2px solid rgb(0, 153, 255);;
+    border: 2px solid rgb(0, 153, 255);
 }
 
 .error{

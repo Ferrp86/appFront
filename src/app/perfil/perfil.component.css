@@ -1,4 +1,18 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
+
 .container{
-    margin-top: 50px;
-    margin-bottom: 50px;
+
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+
+.containerPerfil{
+    display: flex;
+
+}
+
+.perfil{
+    margin-left: 0px;
 }

@@ -1,3 +1,4 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
 
 /* HEADER */
 .fas{
@@ -51,7 +52,7 @@ margin-right: 50px;
 
 .logo{
     height: 35px;
-    margin-left: 750px
+    margin-left: 1050px
 }
 
 
