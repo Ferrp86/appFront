@@ -14,11 +14,10 @@ export class UsuariosService {
     this.baseUrl = 'http://localhost:3000/api/usuarios';
   }
 
-  // registrarUsuario(body: Usuario) {
-  //   return this.httpClient
-  //     .post(`${this.baseUrl}/registro`, body)
-  //     .toPromise();
-  // }
+  registro(formValues: any) {
+    return this.httpClient.post(`${this.baseUrl}/registro`, formValues).toPromise();
+    /* return firstValueFrom(this.httpClient.post(`${this.baseUrl}/registro`, formValues)); */
+  }
 
   login(body: { email: string, password: string }) {
 
@@ -29,6 +28,4 @@ export class UsuariosService {
     }
     return this.httpClient.post(`${this.baseUrl}/login`, body, httpOptions).toPromise();
   }
-
-
 }
