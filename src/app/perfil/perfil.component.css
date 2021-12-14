@@ -1,18 +1,75 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
 
-.container{
+.containerPerfil{
+ 
+}
 
-    margin-left: 50px;
+.perfilUsuario{
+    background-color: black;
+    color: white;
+    width: 30%;
     margin-right: 50px;
+    /* border: 3px solid white; */
+    z-index: 1;
+    height: 1000px;
 }
 
 
+.nombre{
+    background-color: white;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.nombre>h2{
+    color: black;
+    text-align: center;
+}
+
+.foto{
+    
+    margin: 50px auto;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    color: black;
+}
+
+
+.descripcion{
+    width: 100%;
+}
+
+.descripcion>p{
+    text-align: center;
+}
+
+.panel2{
+    padding: 30px;
+}
+
+.table  {
+    color: white;
+}
 
 .containerPerfil{
     display: flex;
+    padding: 100px;
+    
 
 }
 
 .perfil{
     margin-left: 0px;
+}
+
+
+.galeriaImagenes{
+    display: flex;
+
+}
+
+.imagenGaleria{
+
+
 }

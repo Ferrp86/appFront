@@ -26,33 +26,35 @@ header{
     color:white;
     display: flex;
     cursor: pointer;
-    width: 540px;
+    width: 1000px;
     height: 30px;
 }
 
 .botonHome{
-    margin-right: 50px;
+    margin-right: 100px;
 }
 
-.botonHome:hover{
- lighting-color: lightcyan;
-}
+
 
 .botonRegistro{
-margin-right: 50px;
+    margin-right: 100px;
 }
+
 
 .botonLogin{
-    margin-right: 50px;
+    margin-right: 100px;
 }
 
+
+
 .botonPerfil{
-    margin-right: 50px;
+    margin-right: 100px;
 }
+
 
 .logo{
     height: 35px;
-    margin-left: 1050px
+    margin-left: 600px
 }
 
 
