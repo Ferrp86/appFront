@@ -1,8 +1,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
 
+
+/* CONTENEDOR PRINCIPAL */
 .containerPerfil{
- 
+ background-color: rgb(255, 248, 248);
 }
+
+/* CONTENEDOR USUARIO */
 
 .perfilUsuario{
     background-color: black;
@@ -12,6 +16,7 @@
     /* border: 3px solid white; */
     z-index: 1;
     height: 1000px;
+    border: 2px solid white;
 }
 
 
@@ -69,7 +74,9 @@
 
 }
 
-.imagenGaleria{
+/* CONTENEDOR MAPA */
 
 
-}
+
+
+/* CONTENEDOR EVENTOS */
