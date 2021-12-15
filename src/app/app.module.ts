@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { FooterComponent } from './footer/footer.component';
 import { MapaComponent } from './mapa/mapa.component';
+import { AgmCoreModule } from '@agm/core';
 /* import { AgmCoreModule } from '@agm/core'; */
 @NgModule({
   declarations: [
@@ -30,9 +31,9 @@ import { MapaComponent } from './mapa/mapa.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    /*     AgmCoreModule.forRoot({
+    AgmCoreModule.forRoot({
           apiKey: 'AIzaSyDyehZcFqZdnsfoGFxaldHE8bnK81Y99w8'
-        }) */
+        })
   ],
   providers: [],
   bootstrap: [AppComponent]
