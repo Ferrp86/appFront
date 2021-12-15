@@ -1,6 +1,6 @@
 <div class="containerPerfil">
 
-    <div class="row">
+    <div class="row col-md-12">
 
         <div class="col-md-4 perfilUsuario">
 
@@ -87,17 +87,28 @@
         </div>
 
 
-        <div class="col-md-8">
+        <div class="col-md-4">
 
             <div class="divMapa">
-                <h1>
-                    <strong class="mb=">TODOS LOS EVENTOS</strong>
-                </h1>
 
-                <app-mapa class="mapa"></app-mapa>
-                
+
+                <div class="mapa">
+                    <app-mapa></app-mapa>
+                </div>
+
             </div>
+
         </div>
+
+
+
+        <div class="col-md-4 containerEventos">
+            
+            <app-eventos></app-eventos>
+
+        </div>
+
+
     </div>
 
 

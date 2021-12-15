@@ -13,6 +13,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { FooterComponent } from './footer/footer.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { AgmCoreModule } from '@agm/core';
+import { EventosComponent } from './eventos/eventos.component';
 /* import { AgmCoreModule } from '@agm/core'; */
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AgmCoreModule } from '@agm/core';
     PerfilComponent,
     FooterComponent,
     MapaComponent,
+    EventosComponent,
   ],
   imports: [
     BrowserModule,

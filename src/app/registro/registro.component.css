@@ -1,10 +1,11 @@
 .heroVideo{
     width: 100%;
+    filter: saturate(50%);
+    filter: grayscale(50%);
 }
     
 .video{
     width: 100%;
-    filter: brightness(70%);
 }
    
 .paddingHeader{
@@ -20,7 +21,6 @@ form{
     
     color: white;
     background-color: black;
-    filter: brightness(80%);
     padding: 10px; 
 }
 
