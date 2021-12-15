@@ -8,20 +8,26 @@
                 Home
             </div>
 
-            <div class="botonPerfil" [routerLink]="['/perfil']">
+            <div class="botonPerfil" [routerLink]="['/perfil']" *ngIf="isLogged">
                 <i class="fas fa-user"></i>
                 Tu Orbita
-                
+
             </div>
 
-            <div class="botonRegistro" [routerLink]="['/registro']">
+            <div class="botonRegistro" [routerLink]="['/registro']" *ngIf="!isLogged">
                 <i class="fas fa-satellite-dish"></i>
                 Entra en la órbita
             </div>
 
-            <div class="botonLogin" [routerLink]="['/login']">
+            <div class="botonLogin" [routerLink]="['/login']" *ngIf="!isLogged">
                 <i class="fas fa-sign-in-alt"></i>
                 Login
+
+            </div>
+
+            <div class="botonLogin" *ngIf="isLogged" (click)="clickLogout()">
+                Bienvenido {{usuario}} | Logout
+                <i class="fas fa-sign-in-alt"></i>
 
             </div>
 

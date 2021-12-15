@@ -42,7 +42,9 @@ export class LoginComponent implements OnInit {
         if (response.Error) {
           this.error = response.Error;
         } else {
+          console.log(response);
           localStorage.setItem('user_token', response.token);
+          localStorage.setItem('username', response.username);
           this.router.navigate(['/perfil']);
         }
       })
