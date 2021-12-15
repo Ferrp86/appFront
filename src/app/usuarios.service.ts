@@ -15,12 +15,15 @@ export class UsuariosService {
   }
 
   registro(formValues: any) {
-    return this.httpClient.post(`${this.baseUrl}/registro`, formValues).toPromise();
-    /* return firstValueFrom(this.httpClient.post(`${this.baseUrl}/registro`, formValues)); */
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json'
+      })
+    }
+    return this.httpClient.post(`${this.baseUrl}/registro`, formValues, httpOptions).toPromise();
   }
 
-  login(body: { email: string, password: string }) {
-
+  login(body: { email: string, password: string }): Promise<any> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json'

@@ -29,11 +29,9 @@ export class RegistroComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   async onSubmit() {
-    // const response = await this.usuariosService.registrarUsuario(this.formulario.value);
-    console.log('envío de registro');
-
+    const response = await this.usuariosService.registro(this.formulario.value);
+    console.log(response);
   }
 
 }

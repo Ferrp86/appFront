@@ -12,7 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { FooterComponent } from './footer/footer.component';
 import { MapaComponent } from './mapa/mapa.component';
-import { AgmCoreModule } from '@agm/core';
+/* import { AgmCoreModule } from '@agm/core'; */
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +30,9 @@ import { AgmCoreModule } from '@agm/core';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDyehZcFqZdnsfoGFxaldHE8bnK81Y99w8'
-    })
+    /*     AgmCoreModule.forRoot({
+          apiKey: 'AIzaSyDyehZcFqZdnsfoGFxaldHE8bnK81Y99w8'
+        }) */
   ],
   providers: [],
   bootstrap: [AppComponent]

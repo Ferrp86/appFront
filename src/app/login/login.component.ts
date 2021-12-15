@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UsuariosService } from '../usuarios.service';
 
 @Component({
@@ -10,9 +11,12 @@ import { UsuariosService } from '../usuarios.service';
 export class LoginComponent implements OnInit {
 
   formulario: FormGroup;
+  error: string;
+
 
   constructor(
-    private usuariosService: UsuariosService
+    private usuariosService: UsuariosService,
+    private router: Router
   ) {
     this.formulario = new FormGroup({
       email: new FormControl('', [
@@ -21,21 +25,28 @@ export class LoginComponent implements OnInit {
       ]),
       password: new FormControl('', [Validators.required,])
     });
+
+    this.error = '';
   }
 
   ngOnInit(): void {
   }
 
-
   onSubmit() {
+    this.error = '';
+    console.log(this.formulario.value);
+
     this.usuariosService.login(this.formulario.value)
-      .then((response) => {
+      .then(response => {
         console.log(response);
-        console.log('Hacemos el login');
+        if (response.Error) {
+          this.error = response.Error;
+        } else {
+          localStorage.setItem('user_token', response.token);
+          this.router.navigate(['/perfil']);
+        }
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch(err => console.log(err));
   }
 
   checkError(controlName: string, error: string): boolean {
