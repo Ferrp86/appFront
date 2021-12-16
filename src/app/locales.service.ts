@@ -52,7 +52,7 @@ export class LocalesService {
       localStorage.setItem('eventos', JSON.stringify(this.arrEventos))
     }
 
-    this.arrEventos.push(newEvento);
+    // this.arrEventos.push(newEvento);
     console.log(this.arrEventos);
   }
 

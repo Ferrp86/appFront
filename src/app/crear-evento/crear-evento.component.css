@@ -12,3 +12,9 @@
     padding: 40px;
     color: white;
 }
+
+
+.error{
+    color: tomato;
+    font-size: 13px;
+}

@@ -8,7 +8,7 @@
             <div class="form-group">
                 <label class="form-label">Nombre del evento</label>
                 <input class="form-control" type="text" name="nombre" formControlName="nombre">
-                <div class="error" *ngIf="newEvento.controls.titulo.errors && newEvento.controls.titulo.touched">
+                <div class="error" *ngIf="newEvento.controls.nombre.errors && newEvento.controls.nombre.touched">
                     introduce un nombre
                 </div>
             </div>
@@ -16,7 +16,7 @@
             <div class="form-group">
                 <label class="form-label">Descripción</label>
                 <input class="form-control" type="text" name="descripcion" formControlName="descripcion">
-                <div class="error" *ngIf="newEvento.controls.titulo.errors && newEvento.controls.titulo.touched">
+                <div class="error" *ngIf="newEvento.controls.descripcion.errors && newEvento.controls.descripcion.touched">
                     introduce una descripcion
                 </div>
             </div>
@@ -24,7 +24,7 @@
             <div class="form-group">
                 <label class="form-label">localización</label>
                 <input class="form-control" formControlName="localizacion">
-                <div class="error" *ngIf="newEvento.controls.texto.errors && newEvento.controls.texto.touched">
+                <div class="error" *ngIf="newEvento.controls.localizacion.errors && newEvento.controls.localizacion.touched">
                     introduce una localización
                 </div>
             </div>
