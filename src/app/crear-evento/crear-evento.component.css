@@ -4,3 +4,11 @@
     width: 100%;
     margin-top: 25px;
 }
+
+.contenedorEventos{
+    width: 450px;
+    background-color: black;
+    margin-left: 195px;
+    padding: 40px;
+    color: white;
+}

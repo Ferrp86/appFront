@@ -2,7 +2,7 @@
 
     <div class="row col-md-12">
 
-        <div class="col-md-4 perfilUsuario">
+        <div class="col-md-4 perfilLocal">
 
             <!-- SIDEBAR USUARIO -->
 
@@ -10,51 +10,50 @@
             <div class="panel">
 
                 <div class="nombre">
-                    <h2 class="">Juan Fernández Tenorio</h2>
+                    <h2 class="">Nombre del local</h2>
                 </div>
 
                 <div class="foto">
-                    <img src="" alt="Foto de perfil">
+                    <img src="" alt="Foto del local">
                 </div>
 
                 <div class="descripcion">
                     <h3 style="text-align: center">Descripción</h3>
-                    <p>Me gusta ir de conciertos, exposiciones, a fiestas de electrónica y sobre todo tomar algo con mis
-                        amigos.</p>
+                    <p>Sala dedicada a eventos de conciertos </p>
                 </div>
             </div>
 
             <div class="panel2">
 
-                <h3 style="text-align: center">Órbita</h3>
+                <h3 style="text-align: center">Próximo eventos</h3>
 
                 <div class="table">
                     <table class="table">
                         <thead>
                             <tr class="hidden">
 
-                                <th>Local</th>
+                                <th>Fecha</th>
                                 <th>Evento</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
 
-                                <td>Sala Even</td>
+                                <td>01/01/2022</td>
                                 <td>
                                     Drum and Bass
                                 </td>
                             </tr>
                             <tr>
-                                <td>Los Martínez</td>
+                                <td>14/03/2022</td>
                                 <td>
                                     Flamenco
                                 </td>
                             </tr>
                             <tr>
-                                <td>Centro Andaluz de Arte Contemporáneo</td>
+                                <td>28/04/2022</td>
                                 <td>
-                                    Exposición
+                                    Concierto de rock
                                 </td>
                             </tr>
                         </tbody>
@@ -62,20 +61,6 @@
                 </div>
 
             </div>
-
-
-            <!-- <div class="panelFotos">
-
-                <h3 style="text-align: center">Fotos</h3>
-
-                <div class="galeriaImagenes">
-                    <div class="imagenGaleria"></div>
-                    <div class="imagenGaleria"></div>
-                    <div class="imagenGaleria"></div>
-                    <div class="imagenGaleria"></div>
-                </div>
-
-            </div> -->
 
 
         </div>
@@ -91,15 +76,11 @@
                     <i class="fas fa-search"></i>
                 </div>
                 
-             
             </div>
-
-
 
             <div class="mapa">
                 <app-mapa></app-mapa>
             </div>
-
 
         </div>
 
@@ -107,11 +88,12 @@
 
         <div class="col-md-4 containerEventos">
 
-            <app-eventos></app-eventos>
+            <app-crear-evento></app-crear-evento>
 
         </div>
 
     </div>
 
 </div>
+
 

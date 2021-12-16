@@ -1,6 +1,6 @@
 <div class="container col-12 col-md-6 paddingHeader">
     <div *ngIf="isHide">
-        <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil locales</button>
+        
         <h2>registro para nuevos usuarios</h2>
         <form [formGroup]="formulario_usuario" (ngSubmit)="onSubmitUser()" class="text-center row" novalidate>
             <div class="mb-3 col-12 col-md-6">
@@ -19,31 +19,6 @@
                     *introduce primer apellido
                 </div>
 
-<<<<<<< HEAD
-        </div>
-        <div class="mb-3 col-12 col-md-6">
-            <label class="form-label">Segundo apellido</label>
-            <input type="text" class="form-control" formControlName="segundo_apellido">
-            <div class="error"
-                *ngIf="formulario.controls.segundo_apellido.errors && formulario.controls.segundo_apellido.touched">
-                *introduce segundo apellido
-            </div>
-        </div>
-        <div class="mb-3 col-12 col-md-6">
-            <label class="form-label">Email</label>
-            <input type="text" class="form-control" formControlName="email">
-            <div class="error" *ngIf="formulario.controls.email.errors && formulario.controls.email.touched">
-                *introduce tu email
-            </div>
-        </div>
-        <div class="mb-3 col-12 col-md-6">
-            <label class="form-label">fecha de nacimiento</label>
-            <input type="date" class="form-control" formControlName="fecha_nacimiento">
-            <div class="error"
-                *ngIf="formulario.controls.fecha_nacimiento.errors && formulario.controls.fecha_nacimiento.touched">
-                *introduce tu fecha de nacimiento
-=======
->>>>>>> 797db894835c0946fc6956e41e3608d97855ebd1
             </div>
             <div class="mb-3 col-12 col-md-6">
                 <label class="form-label">Segundo apellido</label>
@@ -87,6 +62,7 @@
             </div>
 
 
+            <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil locales</button>
 
             <div class="mb-3">
                 <input type="submit" class="btn btn-primary button" [disabled]="!formulario_local.valid"
@@ -95,7 +71,7 @@
         </form>
     </div>
     <div *ngIf="!isHide">
-        <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil usuarios</button>
+        
         <h2>registro para nuevos locales</h2>
         <form [formGroup]="formulario_local" (ngSubmit)="onSubmitLocal()" class="text-center row" novalidate>
             <div class="mb-3 col-12 col-md-6">
@@ -139,7 +115,7 @@
                     *Introduce un usuario
                 </div>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 col-12 col-md-6">
                 <label class="form-label">Contraseña</label>
                 <input type="password" class="form-control" formControlName="password">
             </div>
@@ -148,6 +124,8 @@
                 *Introduce una contraseña
             </div>
 
+            <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil usuarios</button>
+            
             <div class="mb-3">
                 <input type="submit" class="btn btn-primary button" [disabled]="!formulario_local.valid"
                     value="Registrar">

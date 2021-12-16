@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { LocalesService } from '../locales.service';
 import { UsuariosService } from '../usuarios.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class CrearEventoComponent implements OnInit {
 
   newEvento: FormGroup;
 
-  constructor( private usuariosService: UsuariosService ) { 
+  constructor( private localesService: LocalesService ) { 
 
     this.newEvento = new FormGroup ({
       nombre: new FormControl('', [
@@ -33,9 +34,9 @@ export class CrearEventoComponent implements OnInit {
   }
 
 
-  // onSubmit(){
-  //   console.log(this.newEvento.value);
-  //   this.usuariosService.agregarEvento(this.newEvento.value)
+  onSubmit(){
+    console.log(this.newEvento.value);
+    this.localesService.agregarEvento(this.newEvento.value)
     
-  // }
+  }
 }
