@@ -23,4 +23,13 @@ export class LocalesService {
     return this.httpClient.post(`${this.baseUrl}/login`, localForm, httpOptions).toPromise();
   }
 
+  registro(formValues: any) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json'
+      })
+    }
+    return this.httpClient.post(`${this.baseUrl}/registro`, formValues, httpOptions).toPromise();
+  }
+
 }

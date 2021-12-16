@@ -62,8 +62,6 @@ export class LoginComponent implements OnInit {
 
   onSubmitLocal() {
     this.error = '';
-    /*   console.log(this.formulario_local.value); */
-
     this.localesService.login(this.formulario_local.value)
       .then(response => {
         console.log(response);

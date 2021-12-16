@@ -24,7 +24,11 @@ form{
     padding: 10px; 
 }
 
-
+h2{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
 
 .button{
 
