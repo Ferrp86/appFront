@@ -1,35 +1,74 @@
 <div class="container col-12 col-md-4 paddingHeader">
+    <div class="mostrar" *ngIf="isHide">
 
-    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="text-center row">
-        <div class="mb-3 col-12 col-md-6">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-control" formControlName="email" placeholder="Email">
-            <p class="error" *ngIf="checkError('email', 'required')">
-                * El email es requerido
-            </p>
-            <p class="error" *ngIf="checkError('email', 'pattern')">
-                * El email debe tener formato correcto
-            </p>
-        </div>
+        <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil</button>
+        <form [formGroup]="formulario_usuario" (ngSubmit)="onSubmit()" class="form_user text-center row">
+            <p>Login para usuarios</p>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Email usuario</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="Email del usuario">
+                <p class="error" *ngIf="checkError('email', 'required')">
+                    * El email es requerido
+                </p>
+                <p class="error" *ngIf="checkError('email', 'pattern')">
+                    * El email debe tener formato correcto
+                </p>
+            </div>
 
-        <div class="mb-3 col-12 col-md-6">
-            <label class="form-label">Contraseña</label>
-            <input type="password" class="form-control" formControlName="password" placeholder="Password">
-            <p class="error" *ngIf="checkError('password', 'required')">
-                * El password es requerido
-            </p>
-        </div>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                <p class="error" *ngIf="checkError('password', 'required')">
+                    * El password es requerido
+                </p>
+            </div>
 
-        <div class="mb-3">
-            <input type="submit" class="btn btn-primary button" value="Enviar">
-        </div>
+            <div class="mb-3">
+                <input type="submit" class="btn btn-primary button" value="Enviar">
+            </div>
 
-        <div class="registrar">
-            <p> ¿Aún no te has unido a la órbita?</p>
-            <p class="pulsaRegistro" [routerLink]="['/registro']">Regístrate ahora</p>
-        </div>
-        <div class="error" *ngIf=" error !== '' ">
-            {{error}}
-        </div>
-    </form>
+            <div class="registrar">
+                <p> ¿Aún no te has unido a la órbita?</p>
+                <p class="pulsaRegistro" [routerLink]="['/registro']">Regístrate ahora</p>
+            </div>
+            <div class="error" *ngIf=" error !== '' ">
+                {{error}}
+            </div>
+        </form>
+    </div>
+
+    <div class="mostrar" *ngIf="!isHide">
+        <button (click)="changeForm()" class="btn btn-primary button" id="local">Cambiar perfil</button>
+        <form [formGroup]="formulario_local" (ngSubmit)="onSubmit()" class="form_local text-center row">
+            <p>Login para locales</p>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Usuario</label>
+                <input type="text" class="form-control" formControlName="usuario" placeholder="Usuario del local">
+                <p class="error" *ngIf="checkError('email', 'required')">
+                    * El usuario es requerido
+                </p>
+            </div>
+
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                <p class="error" *ngIf="checkError('password', 'required')">
+                    * El password es requerido
+                </p>
+            </div>
+
+            <div class="mb-3">
+                <input type="submit" class="btn btn-primary button" id="subLocal" value="Enviar">
+            </div>
+
+            <div class="registrar">
+                <p> ¿Aún no te has unido a la órbita?</p>
+                <p class="pulsaRegistro" [routerLink]="['/registro']">Regístrate ahora</p>
+            </div>
+            <div class="error" *ngIf=" error !== '' ">
+                {{error}}
+            </div>
+        </form>
+    </div>
+
 </div>
