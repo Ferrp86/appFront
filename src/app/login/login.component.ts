@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LocalesService } from '../locales.service';
 import { UsuariosService } from '../usuarios.service';
 
 @Component({
@@ -16,7 +17,11 @@ export class LoginComponent implements OnInit {
   isHide: boolean;
 
 
-  constructor(private usuariosService: UsuariosService, private router: Router) {
+  constructor(
+    private usuariosService: UsuariosService,
+    private router: Router,
+    private localesService: LocalesService) {
+
     this.formulario_usuario = new FormGroup({
       email: new FormControl('', [
         Validators.required,
@@ -26,7 +31,7 @@ export class LoginComponent implements OnInit {
     });
 
     this.formulario_local = new FormGroup({
-      usuario: new FormControl('', [Validators.required,]),
+      usuario_local: new FormControl('', [Validators.required,]),
       password: new FormControl('', [Validators.required,])
     })
 
@@ -37,9 +42,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit() {
+  onSubmitUser() {
     this.error = '';
-    console.log(this.formulario_usuario.value);
 
     this.usuariosService.login(this.formulario_usuario.value)
       .then(response => {
@@ -56,11 +60,33 @@ export class LoginComponent implements OnInit {
       .catch(err => console.log(err));
   }
 
+  onSubmitLocal() {
+    this.error = '';
+    /*   console.log(this.formulario_local.value); */
+
+    this.localesService.login(this.formulario_local.value)
+      .then(response => {
+        console.log(response);
+        if (response.Error) {
+          this.error = response.Error;
+        } else {
+          console.log(response);
+          localStorage.setItem('local_token', response.token);
+          localStorage.setItem('localname', response.local_name);
+        }
+      })
+      .catch(err => console.log(err));
+  }
+
   changeForm() {
     this.isHide = !this.isHide
   }
 
-  checkError(controlName: string, error: string): boolean {
+  checkErrorUser(controlName: string, error: string): boolean {
     return this.formulario_usuario.get(controlName)!.hasError(error) && this.formulario_usuario.get(controlName)!.touched;
+  }
+
+  checkErrorLocal(controlName: string, error: string): boolean {
+    return this.formulario_local.get(controlName)!.hasError(error) && this.formulario_local.get(controlName)!.touched;
   }
 }
