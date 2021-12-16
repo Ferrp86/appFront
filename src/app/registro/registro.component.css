@@ -44,3 +44,20 @@ form{
     color: tomato;
     font-size: 13px;
 }
+
+
+
+/* Responsive movil*/
+
+@media(max-width: 50em){
+    .video{
+        filter: brightness(0%);
+    }
+
+    .container{
+        margin-left: 20px;
+        z-index: 3;
+
+    }
+
+}

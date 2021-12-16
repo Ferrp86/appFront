@@ -10,8 +10,7 @@
             <div class="panel">
 
                 <div class="nombre">
-                    <h2 class="">Juan Fernández Tenorio
-                    </h2>
+                    <h2 class="">Juan Fernández Tenorio</h2>
                 </div>
 
                 <div class="foto">
@@ -65,7 +64,7 @@
             </div>
 
 
-            <div class="panel">
+            <!-- <div class="panelFotos">
 
                 <h3 style="text-align: center">Fotos</h3>
 
@@ -76,43 +75,49 @@
                     <div class="imagenGaleria"></div>
                 </div>
 
+            </div> -->
+
+            <div class="containerCrearEvento">
+
+                <app-crear-evento></app-crear-evento>
+
             </div>
 
 
-            <div class="panel">
-
-
-
-            </div>
         </div>
 
 
-        <div class="col-md-4">
-
-            <div class="divMapa">
+        <div class="col-md-4 containerMapa">
 
 
-                <div class="mapa">
-                    <app-mapa></app-mapa>
+            <div class="containerBuscador">
+
+                <input class="buscador" type="search" placeholder="¿A dónde quieres ir?" class="form-control"/>
+                <div class="iconoBuscador">
+                    <i class="fas fa-search"></i>
                 </div>
-
+                
+             
             </div>
+
+
+
+            <div class="mapa">
+                <app-mapa></app-mapa>
+            </div>
+
 
         </div>
 
 
 
         <div class="col-md-4 containerEventos">
-            
+
             <app-eventos></app-eventos>
 
         </div>
 
-
     </div>
 
-
-
-
-
 </div>
+
