@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LocalesService } from '../locales.service';
 import { UsuariosService } from '../usuarios.service';
 
 @Component({
@@ -10,15 +11,18 @@ import { UsuariosService } from '../usuarios.service';
 })
 export class LoginComponent implements OnInit {
 
-  formulario: FormGroup;
+  formulario_usuario: FormGroup;
+  formulario_local: FormGroup;
   error: string;
+  isHide: boolean;
 
 
   constructor(
     private usuariosService: UsuariosService,
-    private router: Router
-  ) {
-    this.formulario = new FormGroup({
+    private router: Router,
+    private localesService: LocalesService) {
+
+    this.formulario_usuario = new FormGroup({
       email: new FormControl('', [
         Validators.required,
         Validators.pattern(/^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/)
@@ -26,17 +30,22 @@ export class LoginComponent implements OnInit {
       password: new FormControl('', [Validators.required,])
     });
 
+    this.formulario_local = new FormGroup({
+      usuario_local: new FormControl('', [Validators.required,]),
+      password: new FormControl('', [Validators.required,])
+    })
+
     this.error = '';
+    this.isHide = false;
   }
 
   ngOnInit(): void {
   }
 
-  onSubmit() {
+  onSubmitUser() {
     this.error = '';
-    console.log(this.formulario.value);
 
-    this.usuariosService.login(this.formulario.value)
+    this.usuariosService.login(this.formulario_usuario.value)
       .then(response => {
         console.log(response);
         if (response.Error) {
@@ -51,7 +60,31 @@ export class LoginComponent implements OnInit {
       .catch(err => console.log(err));
   }
 
-  checkError(controlName: string, error: string): boolean {
-    return this.formulario.get(controlName)!.hasError(error) && this.formulario.get(controlName)!.touched;
+  onSubmitLocal() {
+    this.error = '';
+    this.localesService.login(this.formulario_local.value)
+      .then(response => {
+        console.log(response);
+        if (response.Error) {
+          this.error = response.Error;
+        } else {
+          console.log(response);
+          localStorage.setItem('local_token', response.token);
+          localStorage.setItem('localname', response.local_name);
+        }
+      })
+      .catch(err => console.log(err));
+  }
+
+  changeForm() {
+    this.isHide = !this.isHide
+  }
+
+  checkErrorUser(controlName: string, error: string): boolean {
+    return this.formulario_usuario.get(controlName)!.hasError(error) && this.formulario_usuario.get(controlName)!.touched;
+  }
+
+  checkErrorLocal(controlName: string, error: string): boolean {
+    return this.formulario_local.get(controlName)!.hasError(error) && this.formulario_local.get(controlName)!.touched;
   }
 }

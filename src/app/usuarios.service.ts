@@ -10,7 +10,6 @@ export class UsuariosService {
 
   private baseUrl: string;
 
-
   // arrEventos: Evento[];
 
   constructor(

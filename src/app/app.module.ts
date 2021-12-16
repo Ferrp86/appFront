@@ -15,7 +15,7 @@ import { MapaComponent } from './mapa/mapa.component';
 import { AgmCoreModule } from '@agm/core';
 import { EventosComponent } from './eventos/eventos.component';
 import { CrearEventoComponent } from './crear-evento/crear-evento.component';
-/* import { AgmCoreModule } from '@agm/core'; */
+
 @NgModule({
   declarations: [
     AppComponent,

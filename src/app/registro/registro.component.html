@@ -1,20 +1,25 @@
 <div class="container col-12 col-md-6 paddingHeader">
-    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="text-center row"  novalidate>
-        <div class="mb-3 col-12 col-md-6">
-            <label class="form-label">Nombre</label>
-            <input type="text" class="form-control" formControlName="nombre">
-            <div class="error" *ngIf="formulario.controls.nombre.errors && formulario.controls.nombre.touched">
-                *introduce tu nombre
+    <div *ngIf="isHide">
+        <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil locales</button>
+        <h2>registro para nuevos usuarios</h2>
+        <form [formGroup]="formulario_usuario" (ngSubmit)="onSubmitUser()" class="text-center row" novalidate>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" formControlName="nombre">
+                <div class="error"
+                    *ngIf="formulario_usuario.controls.nombre.errors && formulario_usuario.controls.nombre.touched">
+                    *introduce tu nombre
+                </div>
             </div>
-        </div>
-        <div class="mb-3 col-12 col-md-6">
-            <label class="form-label">Primer apellido</label>
-            <input type="text" class="form-control" formControlName="primer_apellido">
-            <div class="error"
-                *ngIf="formulario.controls.primer_apellido.errors && formulario.controls.primer_apellido.touched">
-                *introduce primer apellido
-            </div>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Primer apellido</label>
+                <input type="text" class="form-control" formControlName="primer_apellido">
+                <div class="error"
+                    *ngIf="formulario_usuario.controls.primer_apellido.errors && formulario_usuario.controls.primer_apellido.touched">
+                    *introduce primer apellido
+                </div>
 
+<<<<<<< HEAD
         </div>
         <div class="mb-3 col-12 col-md-6">
             <label class="form-label">Segundo apellido</label>
@@ -37,30 +42,119 @@
             <div class="error"
                 *ngIf="formulario.controls.fecha_nacimiento.errors && formulario.controls.fecha_nacimiento.touched">
                 *introduce tu fecha de nacimiento
+=======
+>>>>>>> 797db894835c0946fc6956e41e3608d97855ebd1
             </div>
-        </div>
-        <div class="mb-3 col-12 col-md-6">
-            <label class="form-label">Nombre de usuario</label>
-            <input type="text" class="form-control" formControlName="nombre_usuario">
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Segundo apellido</label>
+                <input type="text" class="form-control" formControlName="segundo_apellido">
+                <div class="error"
+                    *ngIf="formulario_usuario.controls.segundo_apellido.errors && formulario_usuario.controls.segundo_apellido.touched">
+                    *introduce*segundo apellido
+                </div>
+            </div>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control" formControlName="email">
+                <div class="error"
+                    *ngIf="formulario_usuario.controls.email.errors && formulario_usuario.controls.email.touched">
+                    *introduce tu email
+                </div>
+            </div>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Fecha de nacimiento</label>
+                <input type="date" class="form-control" formControlName="fecha_nacimiento">
+                <div class="error"
+                    *ngIf="formulario_usuario.controls.fecha_nacimiento.errors && formulario_usuario.controls.fecha_nacimiento.touched">
+                    *introduce tu fecha de nacimiento
+                </div>
+            </div>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Nombre de usuario</label>
+                <input type="text" class="form-control" formControlName="nombre_usuario">
+                <div class="error"
+                    *ngIf="formulario_usuario.controls.nombre_usuario.errors && formulario_usuario.controls.nombre_usuario.touched">
+                    *introduce un nombre de usuario
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" formControlName="password">
+            </div>
             <div class="error"
-                *ngIf="formulario.controls.nombre_usuario.errors && formulario.controls.nombre_usuario.touched">
-                *introduce un nombre de usuario
+                *ngIf="formulario_usuario.controls.password.errors && formulario_usuario.controls.password.touched">
+                *introduce una contraseña
             </div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Contraseña</label>
-            <input type="password" class="form-control" formControlName="password">
-        </div>
-        <div class="error" *ngIf="formulario.controls.password.errors && formulario.controls.password.touched">
-            *introduce una contraseña
-        </div>
 
 
 
-        <div class="mb-3">
-            <input type="submit" class="btn btn-primary button" [disabled]="!formulario.valid">
-        </div>
-    </form>
+            <div class="mb-3">
+                <input type="submit" class="btn btn-primary button" [disabled]="!formulario_local.valid"
+                    value="Registrar">
+            </div>
+        </form>
+    </div>
+    <div *ngIf="!isHide">
+        <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil usuarios</button>
+        <h2>registro para nuevos locales</h2>
+        <form [formGroup]="formulario_local" (ngSubmit)="onSubmitLocal()" class="text-center row" novalidate>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Nombre del local</label>
+                <input type="text" class="form-control" formControlName="nombre_local">
+                <div class="error"
+                    *ngIf="formulario_local.controls.nombre_local.errors && formulario_local.controls.nombre_local.touched">
+                    *Introduce el nombre del local
+                </div>
+            </div>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Dirección</label>
+                <input type="text" class="form-control" formControlName="direccion_local">
+                <div class="error"
+                    *ngIf="formulario_local.controls.direccion_local.errors && formulario_local.controls.direccion_local.touched">
+                    *Introduce la dirección del local (Por ejemplo, Calle de la Moreria, 17, 28001)
+                </div>
+
+            </div>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Ciudad</label>
+                <input type="text" class="form-control" formControlName="ciudad_local">
+                <div class="error"
+                    *ngIf="formulario_local.controls.ciudad_local.errors && formulario_local.controls.ciudad_local.touched">
+                    *Introduce la ciudad
+                </div>
+            </div>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Descripción</label>
+                <input type="text" class="form-control" formControlName="descripcion">
+                <div class="error"
+                    *ngIf="formulario_local.controls.descripcion.errors && formulario_local.controls.descripcion.touched">
+                    *Introduce una descripcion del local
+                </div>
+            </div>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="form-label">Usuario local</label>
+                <input type="text" class="form-control" formControlName="usuario_local">
+                <div class="error"
+                    *ngIf="formulario_local.controls.usuario_local.errors && formulario_local.controls.usuario_local.touched">
+                    *Introduce un usuario
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" formControlName="password">
+            </div>
+            <div class="error"
+                *ngIf="formulario_local.controls.password.errors && formulario_local.controls.password.touched">
+                *Introduce una contraseña
+            </div>
+
+            <div class="mb-3">
+                <input type="submit" class="btn btn-primary button" [disabled]="!formulario_local.valid"
+                    value="Registrar">
+            </div>
+        </form>
+    </div>
+
 </div>
 
 <div class="heroVideo">
