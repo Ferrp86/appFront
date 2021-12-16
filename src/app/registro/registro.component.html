@@ -1,6 +1,6 @@
 <div class="container col-12 col-md-6 paddingHeader">
     <div *ngIf="isHide">
-        <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil</button>
+        <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil locales</button>
         <h2>registro para nuevos usuarios</h2>
         <form [formGroup]="formulario_usuario" (ngSubmit)="onSubmitUser()" class="text-center row" novalidate>
             <div class="mb-3 col-12 col-md-6">
@@ -70,7 +70,7 @@
         </form>
     </div>
     <div *ngIf="!isHide">
-        <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil</button>
+        <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil usuarios</button>
         <h2>registro para nuevos locales</h2>
         <form [formGroup]="formulario_local" (ngSubmit)="onSubmitLocal()" class="text-center row" novalidate>
             <div class="mb-3 col-12 col-md-6">
