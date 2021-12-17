@@ -3,51 +3,18 @@
         <h2><strong>EVENTOS</strong></h2>
     </div>
 
-    <div class="listaEventos" *ngFor="let evento of eventos">
+    <div class="listaEventos" *ngFor="let evento of arrEventos">
 
 
-        <!-- <div class="evento">
+        <div class="evento">
 
             <h3>{{evento.nombre}}</h3>
-            <h4>{{evento.local}}</h4>
+            <p>{{evento.descripcion}}</p>
             <p>{{evento.localizacion}}</p>
-            <img [src]="evento.imagen">
             <p>{{evento.fecha}}</p>
             <p>{{evento.categoria}}</p>
 
-        </div> -->
-
-        <!-- <button class="btn btn-danger" (click)="eliminarPost(post)">Eliminar</button> -->
-        
-        <div class="evento">
-            <h3>Titulo Evento</h3>
-            <h4>Nombre local</h4>
-            <p>Categoría</p>
-            <p>localización</p>
         </div>
-
-        <div class="evento">
-            <h3>Titulo Evento</h3>
-            <h4>Nombre local</h4>
-            <p>Categoría</p>
-            <p>localización</p>
-        </div>
-
-        <div class="evento">
-            <h3>Titulo Evento</h3>
-            <h4>Nombre local</h4>
-            <p>Categoría</p>
-            <p>localización</p>
-        </div>
-
-        <div class="evento">
-            <h3>Titulo Evento</h3>
-            <h4>Nombre local</h4>
-            <p>Categoría</p>
-            <p>localización</p>
-        </div>
-
     </div>
 
-
-</div>
+    <!-- <button class="btn btn-danger" (click)="eliminarPost(post)">Eliminar</button> -->

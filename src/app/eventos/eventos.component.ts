@@ -1,6 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { log } from 'console';
+import { EventosService } from '../eventos.service';
 import { Evento } from '../interface/evento.interface';
-import { UsuariosService } from '../usuarios.service';
+
 
 @Component({
   selector: 'app-eventos',
@@ -9,19 +12,18 @@ import { UsuariosService } from '../usuarios.service';
 })
 export class EventosComponent implements OnInit {
 
-  todosLosEventos!: Evento[];
-  eventos: Evento[];
+  arrEventos: Evento[];
 
-  constructor(private usuariosService: UsuariosService) {
-    this.eventos = [];
-   }
+  constructor(private eventosService: EventosService) {
+
+    this.arrEventos = [];
+
+  }
 
   ngOnInit() {
-    // this.usuariosService.getAllEventos()
-    // .then(arrEventos => {
-    //   this.todosLosEventos = arrEventos;
-    //   this.eventos = arrEventos;
-    // })
+    this.eventosService.getAllEvent()
+      .then(response => this.arrEventos = response)
+      .catch(err => console.log(err));
   }
 
 }
