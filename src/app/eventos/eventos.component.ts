@@ -1,9 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { log } from 'console';
 import { EventosService } from '../eventos.service';
 import { Evento } from '../interface/evento.interface';
-
 
 @Component({
   selector: 'app-eventos',

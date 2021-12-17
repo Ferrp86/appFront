@@ -20,4 +20,8 @@ export class EventosService {
     }
     return this.httpClient.get<any>(`${this.baseUrl}/perfil`, httpOptions).toPromise();
   }
+
+  getLocation(direccion: string): Promise<any> {
+    return this.httpClient.get(`https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDyehZcFqZdnsfoGFxaldHE8bnK81Y99w8&address=${direccion}`).toPromise();
+  }
 }
