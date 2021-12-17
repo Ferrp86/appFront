@@ -111,3 +111,31 @@
     margin-left: 40px;
 
 }
+
+
+/* Responsive movil*/
+
+@media(max-width: 60.875em){
+
+
+    .containerMapa{
+        margin-left: -100px;
+    }
+    .containerEventos{
+        display: none;
+    }
+
+    .containerBuscador{
+        width: 600px;
+    }
+
+    }
+    
+    
+    @media(max-width: 85em){
+        .perfilLocal{
+            display: none;
+        }
+        
+    
+    }

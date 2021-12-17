@@ -4,13 +4,8 @@
 /* CONTENEDOR PRINCIPAL */
 .containerPerfil{
    background-color: white;
-    display: flex;
 }
 
-.mapa{
-    background-image: url(../../assets/IMAGENES/minimalism-space-stars-wallpaper-preview.jpg);
-    width: 700px;
-}
 
 /* CONTENEDOR USUARIO */
 
@@ -82,6 +77,7 @@
 
 /* CONTENEDOR MAPA */
 
+
 .containerBuscador{
     display: flex;
     width: 700px;
@@ -106,11 +102,12 @@
     background-image: url(../../assets/IMAGENES/minimalism-space-stars-wallpaper-preview.jpg);
     color: white;
     /* border: 3px solid white; */
+    padding-bottom: 30px;
     z-index: 1;
-    padding-bottom: 40px;
     width: 30%;
     margin-right: -60px;
     margin-left: 40px;
+    border-radius: 10%;
 
 }
 
@@ -127,6 +124,11 @@
 .containerEventos{
     display: none;
 }
+
+.containerBuscador{
+    width: 600px;
+}
+
 }
 
 

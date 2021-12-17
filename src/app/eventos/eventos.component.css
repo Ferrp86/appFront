@@ -1,6 +1,5 @@
 .contenedorEventos{
     width: 450px;
-  
     margin-left: 195px;
     padding-bottom: 40px;
 }
@@ -11,6 +10,16 @@
     background-color: white;
     margin: 0 auto;
     width: 90%; 
+
+}
+
+.footerEventos{
+    margin: 6px 130px;
+    color: white;
+    background-color: white;
+    margin: 0 auto;
+    width: 90%; 
+    padding: 10px;
 
 }
 
