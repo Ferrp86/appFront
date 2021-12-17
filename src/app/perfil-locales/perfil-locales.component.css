@@ -3,7 +3,8 @@
 
 /* CONTENEDOR PRINCIPAL */
 .containerPerfil{
- background-color: rgb(255, 255, 255);
+    background-image: url(../../assets/IMAGENES/minimalism-space-stars-wallpaper-preview.jpg);
+    height: 100vh;
 
 }
 
@@ -18,7 +19,7 @@
     margin-left: -60px;
     /* border: 3px solid white; */
     z-index: 1;
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
 }
 
 .nombre{
@@ -105,7 +106,7 @@
     color: white;
     /* border: 3px solid white; */
     z-index: 1;
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
     width: 30%;
     margin-right: -60px;
     margin-left: 40px;

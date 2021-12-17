@@ -14,7 +14,9 @@
     color: white;
 }
 
-
+input{
+    margin-bottom: 15px;
+}
 .error{
     color: tomato;
     font-size: 13px;

@@ -8,6 +8,8 @@
 .video{
     width: 100%;
     filter: grayscale(60%);
+    filter: brightness(60%);
+  
 }
 
 .paddingHeader{
