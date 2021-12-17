@@ -2,7 +2,8 @@ export interface Evento {
     nombre: string,
     descripcion: string,
     localizacion: string,
-    imagen: string,
+    latitud: number,
+    longitud: number,
     fecha: string,
     categoria: string,
 }
