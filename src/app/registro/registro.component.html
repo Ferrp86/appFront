@@ -124,12 +124,16 @@
                 *Introduce una contraseña
             </div>
 
-            <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil usuarios</button>
+           
             
             <div class="mb-3">
+                
+                <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil usuarios</button>
+
                 <input type="submit" class="btn btn-primary button" [disabled]="!formulario_local.valid"
                     value="Registrar">
             </div>
+
         </form>
     </div>
 
