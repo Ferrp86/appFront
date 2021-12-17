@@ -11,10 +11,10 @@
 /* CONTENEDOR USUARIO */
 
 .perfilLocal{
-    background-color: black;
+    background-image: url(../../assets/IMAGENES/minimalism-space-stars-wallpaper-preview.jpg);
     color: white;
     width: 30%;
-    margin-right: 5px;
+    margin-right: 40px;
     margin-left: -60px;
     /* border: 3px solid white; */
     z-index: 1;
@@ -22,7 +22,6 @@
 }
 
 .nombre{
-    background-color: black;
     margin: 0 auto;
     width: 90%;
 }
@@ -92,6 +91,9 @@
     padding: 20px;
 }
 
+
+
+
 .fa-search{
     color: white;
 }
@@ -99,5 +101,13 @@
 /* CONTENEDOR EVENTOS */
 
 .containerEventos{
-    margin-left: 30px;
+    background-image: url(../../assets/IMAGENES/minimalism-space-stars-wallpaper-preview.jpg);
+    color: white;
+    /* border: 3px solid white; */
+    z-index: 1;
+    padding-bottom: 40px;
+    width: 30%;
+    margin-right: -60px;
+    margin-left: 40px;
+
 }

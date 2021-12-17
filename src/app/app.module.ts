@@ -16,6 +16,8 @@ import { AgmCoreModule } from '@agm/core';
 import { EventosComponent } from './eventos/eventos.component';
 import { CrearEventoComponent } from './crear-evento/crear-evento.component';
 import { PerfilLocalesComponent } from './perfil-locales/perfil-locales.component';
+import { ProximosEventosComponent } from './proximos-eventos/proximos-eventos.component';
+import { OrbitaComponent } from './orbita/orbita.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { PerfilLocalesComponent } from './perfil-locales/perfil-locales.componen
     EventosComponent,
     CrearEventoComponent,
     PerfilLocalesComponent,
+    ProximosEventosComponent,
+    OrbitaComponent,
   ],
   imports: [
     BrowserModule,

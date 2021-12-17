@@ -18,7 +18,6 @@ export class MapaComponent implements OnInit {
   ngOnInit(): void {
     navigator.geolocation.getCurrentPosition((posicion) => {
       console.log(posicion);
-
     })
 
 

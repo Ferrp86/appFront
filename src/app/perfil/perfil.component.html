@@ -1,8 +1,8 @@
 <div class="containerPerfil">
 
-    <div class="row col-md-12">
+    
 
-        <div class="col-md-4 perfilUsuario">
+        <div class="perfilUsuario">
 
             <!-- SIDEBAR USUARIO -->
 
@@ -28,38 +28,7 @@
 
                 <h3 style="text-align: center">Órbita</h3>
 
-                <div class="table">
-                    <table class="table">
-                        <thead>
-                            <tr class="hidden">
-
-                                <th>Local</th>
-                                <th>Evento</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-
-                                <td>Sala Even</td>
-                                <td>
-                                    Drum and Bass
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Los Martínez</td>
-                                <td>
-                                    Flamenco
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Centro Andaluz de Arte Contemporáneo</td>
-                                <td>
-                                    Exposición
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <app-orbita></app-orbita>
 
             </div>
 
@@ -81,36 +50,29 @@
         </div>
 
 
-        <div class="col-md-4 containerMapa">
-
+        <div class="containerMapa">
 
             <div class="containerBuscador">
-
                 <input class="buscador" type="search" placeholder="¿A dónde quieres ir?" class="form-control" />
                 <div class="iconoBuscador">
                     <i class="fas fa-search"></i>
                 </div>
-
-
             </div>
-
-
 
             <div class="mapa">
                 <app-mapa></app-mapa>
             </div>
 
-
         </div>
 
 
 
-        <div class="col-md-4 containerEventos">
+        <div class="containerEventos">
 
             <app-eventos></app-eventos>
 
         </div>
 
-    </div>
+    
 
 </div>
