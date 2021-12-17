@@ -74,6 +74,8 @@ export class LoginComponent implements OnInit {
           console.log(response);
           localStorage.setItem('local_token', response.token);
           localStorage.setItem('localname', response.local_name);
+          localStorage.setItem('local_desc', response.local_desc);
+          this.router.navigate(['/perfilLocal']);
         }
       })
       .catch(err => console.log(err));

@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilLocalesComponent implements OnInit {
 
-  constructor( ) { }
+  nombre_local: string;
+  descripcion: string;
+
+  constructor() {
+
+    this.nombre_local = '';
+    this.descripcion = '';
+  }
 
   ngOnInit(): void {
+    this.nombre_local = localStorage.getItem('localname')!.toString();
+    this.descripcion = localStorage.getItem('local_desc')!.toString();
   }
 
 }
