@@ -16,12 +16,9 @@ footer a {
 }
 
 footer a:hover {
-    color: teal;
+    color: rgb(0, 153, 255);
 }
 
 
-/* 
-.containerFooter{
-    display: flex;
-} */
+
 

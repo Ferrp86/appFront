@@ -1,7 +1,14 @@
 <div class="container col-12 col-md-4 paddingHeader">
+
+
+    <!-- LOGIN USUARIO -->
+
+
     <div class="mostrar" *ngIf="isHide">
 
-        <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Cambiar perfil</button>
+        <button (click)="changeForm()" class="btn btn-primary button" id="usuario">Soy un local de eventos
+            <i class="fas fa-arrow-right"></i>
+        </button>
         <form [formGroup]="formulario_usuario" (ngSubmit)="onSubmitUser()" class="form_user text-center row">
             <p>Login para usuarios</p>
             <div class="mb-3 col-12 col-md-6">
@@ -37,12 +44,16 @@
         </form>
     </div>
 
+    <!-- LOGIN LOCAL -->
+
     <div class="mostrar" *ngIf="!isHide">
-        <button (click)="changeForm()" class="btn btn-primary button" id="local">Cambiar perfil</button>
+        <button (click)="changeForm()" class="btn btn-primary button" id="local">Soy un usuario
+            <i class="fas fa-arrow-right"></i>
+        </button>
         <form [formGroup]="formulario_local" (ngSubmit)="onSubmitLocal()" class="form_local text-center row">
             <p>Login para locales</p>
             <div class="mb-3 col-12 col-md-6">
-                <label class="form-label">Usuario</label>
+                <label class="form-label">Email local</label>
                 <input type="text" class="form-control" formControlName="usuario_local" placeholder="Usuario del local">
                 <p class="error" *ngIf="checkErrorLocal('usuario_local', 'required')">
                     * El usuario es requerido
@@ -70,5 +81,12 @@
             </div>
         </form>
     </div>
+
+</div>
+
+<div class="heroVideo">
+    <video class="video" autoplay loop type="video/mp4">
+        <source src="../../assets/VIDEOS/Lights - 8675.mp4" type="video/mp4" />
+    </video>
 
 </div>
