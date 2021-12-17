@@ -54,6 +54,9 @@ export class LoginComponent implements OnInit {
           console.log(response);
           localStorage.setItem('user_token', response.token);
           localStorage.setItem('username', response.username);
+          localStorage.setItem('nombre', response.nombre);
+          localStorage.setItem('primer_apellido', response.apellidoUno);
+          localStorage.setItem('segundo_apellido', response.apellidoDos);
           this.router.navigate(['/perfil']);
         }
       })

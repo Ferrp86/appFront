@@ -19,19 +19,16 @@
     /* border: 3px solid white; */
     z-index: 1;
     padding-bottom: 40px;
-
-
 }
 
-
 .nombre{
-    background-color: white;
+    background-color: black;
     margin: 0 auto;
     width: 90%;
 }
 
 .nombre>h2{
-    color: black;
+    color: white;
     text-align: center;
     padding: 10px;
 }

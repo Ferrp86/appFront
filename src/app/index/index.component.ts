@@ -22,15 +22,14 @@ export class IndexComponent implements OnInit {
   ngDoCheck() {
     if (localStorage.getItem('user_token')) {
       this.isLogged = true;
-      this.usuario = localStorage.getItem('username')!.toString();
+      this.usuario = localStorage.getItem('username')!.toString().toUpperCase();
     } else {
       this.isLogged = false;
     }
   }
 
   clickLogout() {
-    localStorage.removeItem('user_token');
-    localStorage.removeItem('username');
+    localStorage.clear();
     this.router.navigate(['/home']);
   }
 
