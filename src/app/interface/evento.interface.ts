@@ -1,9 +1,9 @@
 export interface Evento {
-    nombre: string,
+    nombre_evento: string,
     descripcion: string,
     localizacion: string,
     latitud: number,
     longitud: number,
-    fecha: string,
+    fecha_evento: string,
     categoria: string,
 }
