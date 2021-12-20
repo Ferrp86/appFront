@@ -1,61 +1,61 @@
 <div class="containerPerfil">
 
-        <div class="perfilUsuario">
+    <div class="perfilUsuario">
 
-            <!-- SIDEBAR USUARIO -->
+        <!-- SIDEBAR USUARIO -->
 
-            <div class="panel">
+        <div class="panel">
 
-                <div class="nombre">
-                    <h3>{{nombre}}</h3>
-                </div>
-
-                <div class="foto">
-                    <img src="" alt="Foto de perfil">
-                </div>
-
-                <div class="descripcion">
-                    <h3 style="text-align: center">Descripción</h3>
-                    <p>Me gusta ir de conciertos, exposiciones, a fiestas de electrónica y sobre todo tomar algo con mis
-                        amigos.</p>
-                </div>
+            <div class="nombre">
+                <h3>{{usuario}}</h3>
             </div>
 
-            <div class="panel2">
+            <div class="foto">
+                <img src="" alt="Foto de perfil">
+            </div>
 
-                <h3 style="text-align: center">Órbita</h3>
+            <div class="descripcion">
+                <h3 style="text-align: center">Descripción</h3>
+                <p>Me gusta ir de conciertos, exposiciones, a fiestas de electrónica y sobre todo tomar algo con mis
+                    amigos.</p>
+            </div>
+        </div>
 
-                <app-orbita></app-orbita>
+        <div class="panel2">
 
+            <h3 style="text-align: center">Órbita</h3>
+
+            <app-orbita></app-orbita>
+
+        </div>
+
+    </div>
+
+    <div class="containerMapa">
+
+        <div class="containerBuscador">
+
+            <input class="buscador" type="search" placeholder="¿A dónde quieres ir?" class="form-control" />
+            <div class="iconoBuscador">
+                <i class="fas fa-search"></i>
             </div>
 
         </div>
 
-        <div class="containerMapa">
-
-            <div class="containerBuscador">
-
-                <input class="buscador" type="search" placeholder="¿A dónde quieres ir?" class="form-control" />
-                <div class="iconoBuscador">
-                    <i class="fas fa-search"></i>
-                </div>
-
-            </div>
-
-            <div class="mapa">
-                <app-mapa></app-mapa>
-            </div>
-
+        <div class="mapa">
+            <app-mapa></app-mapa>
         </div>
 
+    </div>
 
 
-        <div class="containerEventos">
 
-            <app-eventos></app-eventos>
+    <div class="containerEventos">
 
-        </div>
+        <app-eventos></app-eventos>
 
-    
+    </div>
+
+
 
 </div>

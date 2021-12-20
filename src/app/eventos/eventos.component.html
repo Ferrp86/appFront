@@ -1,52 +1,19 @@
+<div class="tituloEventos">
+    <h2><strong>EVENTOS</strong></h2>
+</div>
 
-    <div class="tituloEventos">
-        <h2><strong>EVENTOS</strong></h2>
-    </div>
+<div class="listaEventos" *ngFor="let evento of arrEventos">
 
-    <div class="listaEventos" >
-        <div class="evento">
-            <h3>Titulo Evento</h3>
-            <h4>Nombre local</h4>
-            <p>Categoría</p>
-            <p>localización</p>
-        </div>
 
-        <div class="evento">
-            <h3>Titulo Evento</h3>
-            <h4>Nombre local</h4>
-            <p>Categoría</p>
-            <p>localización</p>
-        </div>
+    <div class="evento">
 
-        <div class="evento">
-            <h3>Titulo Evento</h3>
-            <h4>Nombre local</h4>
-            <p>Categoría</p>
-            <p>localización</p>
-        </div>
-
-        <div class="evento">
-            <h3>Titulo Evento</h3>
-            <h4>Nombre local</h4>
-            <p>Categoría</p>
-            <p>localización</p>
-        </div>
-
+        <h3>{{evento.nombre_evento}}</h3>
+        <p>{{evento.descripcion}}</p>
+        <p>{{evento.localizacion}}</p>
+        <p>{{evento.fecha_evento}}</p>
+        <p>{{evento.categoria}}</p>
 
     </div>
+</div>
 
-        <!-- <div class="evento" *ngFor="let evento of eventos">
-
-            <h3>{{evento.nombre}}</h3>
-            p ID p Que será el nombre del local
-            <p>{{evento.localizacion}}</p>
-            <img [src]="evento.imagen">
-            <p>{{evento.fecha}}</p>
-            <p>{{evento.categoria}}</p>
-            
-
-        </div> -->
-
-        <!-- <button class="btn btn-danger" (click)="eliminarPost(post)">Eliminar</button> -->
-        
-  
+<!-- <button class="btn btn-danger" (click)="eliminarPost(post)">Eliminar</button> -->

@@ -20,9 +20,12 @@ export class IndexComponent implements OnInit {
   ngOnInit(): void { }
 
   ngDoCheck() {
-    if (localStorage.getItem('user_token')) {
+    if (localStorage.getItem('user_token') !== null) {
       this.isLogged = true;
       this.usuario = localStorage.getItem('username')!.toString().toUpperCase();
+    } else if (localStorage.getItem('local_token') !== null) {
+      this.isLogged = true;
+      this.usuario = localStorage.getItem('localname')!.toString().toUpperCase();
     } else {
       this.isLogged = false;
     }
