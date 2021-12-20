@@ -24,8 +24,6 @@ export class EventosService {
   }
 
   getEventById(id: number): Promise<any> {
-    console.log(id);
-
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json'

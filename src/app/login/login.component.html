@@ -42,7 +42,6 @@
         </div>
 
         <!-- LOGIN LOCAL -->
-
         <div class="mostrar" *ngIf="!isHide">
             <button (click)="changeForm()" class="btn btn-primary button" id="local">Soy un usuario
                 <i class="fas fa-arrow-right"></i>
@@ -50,7 +49,7 @@
             <form [formGroup]="formulario_local" (ngSubmit)="onSubmitLocal()" class="form_local text-center row">
                 <p>Login para locales</p>
                 <div class="mb-3 col-12 col-md-6">
-                    <label class="form-label">Email local</label>
+                    <label class="form-label">Usuario local</label>
                     <input type="text" class="form-control" formControlName="usuario_local"
                         placeholder="Usuario del local">
                     <p class="error" *ngIf="checkErrorLocal('usuario_local', 'required')">

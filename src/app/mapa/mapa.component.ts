@@ -37,13 +37,10 @@ export class MapaComponent implements OnInit {
   }
 
   async ngOnChanges() {
-    console.log(this.idEvento);
 
     if (this.idEvento !== 0) {
-      console.log('Hola ', this.idEvento);
-
-      /* peticion de evento por id */
       this.arrEventos = await this.eventosService.getEventById(this.idEvento);
+
       this.arrEventos.map(async evento => {
         let direccion = evento.localizacion;
         let response = await this.eventosService.getLocation(direccion);

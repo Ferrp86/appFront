@@ -30,4 +30,12 @@ export class EventosComponent implements OnInit {
     this.idEvento.emit(pId)
   }
 
+  recuperarEventos() {
+    window.location.reload();
+  }
+
+  agregarEventosAgenda(pId: any) {
+    this.idEvento.emit(pId);
+  }
+
 }
