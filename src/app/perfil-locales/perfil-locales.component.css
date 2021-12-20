@@ -14,12 +14,13 @@
 .perfilLocal{
     background-image: url(../../assets/IMAGENES/minimalism-space-stars-wallpaper-preview.jpg);
     color: white;
-    width: 30%;
+    width: 50%;
     margin-right: 40px;
     margin-left: -60px;
     /* border: 3px solid white; */
     z-index: 1;
     /* padding-bottom: 40px; */
+
 }
 
 .nombre{
@@ -35,25 +36,61 @@
 
 .foto{
     
-    margin: 50px auto;
+    margin: 0px auto;
     width: 200px;
     height: 200px;
     background-color: white;
     color: black;
 }
 
+.panel{
+    display: flex;
+    padding-top: 25px;
+}
+
+.localNombreFoto{
+    width: 30%;
+    padding-left: 20px;
+}
+
+
+.nombreLocal{
+    width: 100%;
+    color: white;
+
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    height: 40px;
+    /* margin-left: 250px; */
+}
 
 .descripcion{
-    width: 100%;
+    width: 70%;
+    padding-left: 50px;
+}
+
+.descripcion>h3{    
+    color: white;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    /* align-items: center;
+    justify-content: center; */
+
+    height: 40px;
 }
 
 .descripcion>p{
     text-align: center;
 }
 
+
 .panel2{
-    padding: 30px;
+    margin-top: 50px;
+    padding: 10px;
 }
+
 
 .table  {
     color: white;
@@ -107,9 +144,10 @@
     /* border: 3px solid white; */
     z-index: 1;
     /* padding-bottom: 40px; */
-    width: 30%;
+    width: 50%;
     margin-right: -60px;
     margin-left: 40px;
+
 }
 
 
@@ -117,17 +155,11 @@
 
 @media(max-width: 60.875em){
 
-
-    .containerMapa{
-        margin-left: -100px;
-    }
     .containerEventos{
-        display: none;
+    width: 100%;
     }
 
-    .containerBuscador{
-        width: 600px;
-    }
+
 
     }
     

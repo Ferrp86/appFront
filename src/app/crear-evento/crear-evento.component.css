@@ -24,16 +24,13 @@ input{
 
 h3{
     background-color: white;
-    height: 50px;
+    height: 40px;
     color: black;
     margin: 0 auto;
     padding-bottom: 5px;
     padding-top: 5px;
     justify-content: center;
-    margin: 0 auto;
-    padding-left: 75px;
+    text-align: center;
     margin-bottom: 20px;
     font-weight: bold;
-    /* border-radius: 50%; */
-
 }
