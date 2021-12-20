@@ -9,7 +9,7 @@
 }
    
 .paddingHeader{
-    padding-top: 100px;
+    padding-top:20px;
     position: absolute;
     margin: 0 auto;
     z-index: 1;
@@ -70,7 +70,12 @@ h2{
     font-size: 13px;
 }
 
-
+.registroContainer{
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 150px);
+    width: 100%;
+}
 
 /* Responsive movil*/
 
