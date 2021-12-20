@@ -43,7 +43,7 @@
         </div>
 
         <div class="mapa">
-            <app-mapa></app-mapa>
+            <app-mapa [idEvento]="id_evento"></app-mapa>
         </div>
 
     </div>
@@ -52,7 +52,7 @@
 
     <div class="containerEventos">
 
-        <app-eventos></app-eventos>
+        <app-eventos (idEvento)="onidEvento($event)"></app-eventos>
 
     </div>
 

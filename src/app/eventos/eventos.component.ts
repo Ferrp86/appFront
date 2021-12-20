@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { EventosService } from '../eventos.service';
 import { Evento } from '../interface/evento.interface';
 
@@ -11,9 +11,12 @@ export class EventosComponent implements OnInit {
 
   arrEventos: Evento[];
 
+  @Output() idEvento: EventEmitter<number>;
+
   constructor(private eventosService: EventosService) {
 
     this.arrEventos = [];
+    this.idEvento = new EventEmitter();
 
   }
 
@@ -21,6 +24,10 @@ export class EventosComponent implements OnInit {
     this.eventosService.getAllEvent()
       .then(response => this.arrEventos = response)
       .catch(err => console.log(err));
+  }
+
+  mostrarEvento(pId: any) {
+    this.idEvento.emit(pId)
   }
 
 }
