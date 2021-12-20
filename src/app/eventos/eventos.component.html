@@ -6,13 +6,12 @@
 
 
     <div class="evento">
-
         <h3>{{evento.nombre_evento}}</h3>
         <p>{{evento.descripcion}}</p>
         <p>{{evento.localizacion}}</p>
         <p>{{evento.fecha_evento}}</p>
         <p>{{evento.categoria}}</p>
-
+        <button class="btn btn-dark" (click)="mostrarEvento(evento.id)">Mostrar en el mapa</button>
     </div>
 </div>
 

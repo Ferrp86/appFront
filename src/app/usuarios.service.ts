@@ -10,12 +10,8 @@ export class UsuariosService {
 
   private baseUrl: string;
 
-
-
   constructor(private httpClient: HttpClient) {
     this.baseUrl = 'http://localhost:3000/api/usuarios';
-
-
   }
 
   registro(formValues: any) {
@@ -35,6 +31,5 @@ export class UsuariosService {
     }
     return this.httpClient.post(`${this.baseUrl}/login`, body, httpOptions).toPromise();
   }
-
 
 }
