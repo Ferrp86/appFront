@@ -12,13 +12,19 @@
   
 }
 
+.loginContainer{
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 150px);
+    width: 100%;
+  
+}
 .paddingHeader{
     padding-top: 100px;
     position: absolute;
     margin: 0 auto;
     z-index: 1;
     margin-left: 35%;
-    margin-top: 70px;
 }
 
 .form_user{
