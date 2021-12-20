@@ -112,3 +112,16 @@
     border: 2px solid rgb(0, 153, 255);
 }
 
+/* Responsive movil*/
+
+@media(max-width: 50em){
+    .video{
+        filter: brightness(0%);
+    }
+
+    .container{
+        margin-left: 20px;
+        z-index: 3;
+    }
+}
+

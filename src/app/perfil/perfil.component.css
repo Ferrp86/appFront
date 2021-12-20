@@ -24,12 +24,15 @@
 .nombre{
     margin: 0 auto;
     width: 90%;
+    background-color: white;
+
 }
 
 .nombre>h3{
-    color: white;
+    color: black;
     text-align: center;
     padding: 10px;
+    font-size: bold;
 }
 
 .foto{
