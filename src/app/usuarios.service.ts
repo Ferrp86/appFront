@@ -1,7 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Evento } from './interface/evento.interface';
-
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +28,16 @@ export class UsuariosService {
       })
     }
     return this.httpClient.post(`${this.baseUrl}/login`, body, httpOptions).toPromise();
+  }
+
+  getUserEvent(): Promise<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': localStorage.getItem('user_token')!
+      })
+    }
+    return this.httpClient.get<any>(`${this.baseUrl}/events`, httpOptions).toPromise();
   }
 
 }

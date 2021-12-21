@@ -11,6 +11,7 @@ export class PerfilComponent implements OnInit {
   primer_apellido: string;
   segundo_apellido: string;
   usuario: string;
+  reload: any;
 
   constructor() {
     this.id_evento = 0;
@@ -30,6 +31,10 @@ export class PerfilComponent implements OnInit {
 
   onidEvento($event: number) {
     this.id_evento = $event;
+  }
+
+  onReload($event: any) {
+    this.reload = $event;
   }
 
 }

@@ -25,7 +25,7 @@
 
             <h3 style="text-align: center">Órbita</h3>
 
-            <app-orbita></app-orbita>
+            <app-orbita [reload]="reload"></app-orbita>
 
         </div>
 
@@ -43,7 +43,7 @@
         </div>
 
         <div class="mapa">
-            <app-mapa [idEvento]="id_evento"></app-mapa>
+            <app-mapa [idEvento]="id_evento" [reload]="reload"></app-mapa>
         </div>
 
     </div>
@@ -52,7 +52,7 @@
 
     <div class="containerEventos">
 
-        <app-eventos (idEvento)="onidEvento($event)"></app-eventos>
+        <app-eventos (idEvento)="onidEvento($event)" (reload)="onReload($event)"></app-eventos>
 
     </div>
 

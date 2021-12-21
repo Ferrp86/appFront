@@ -12,11 +12,13 @@ export class EventosComponent implements OnInit {
   arrEventos: Evento[];
 
   @Output() idEvento: EventEmitter<number>;
+  @Output() reload: EventEmitter<any>;
 
   constructor(private eventosService: EventosService) {
 
     this.arrEventos = [];
     this.idEvento = new EventEmitter();
+    this.reload = new EventEmitter();
 
   }
 
@@ -31,11 +33,14 @@ export class EventosComponent implements OnInit {
   }
 
   recuperarEventos() {
-    window.location.reload();
+    this.reload.emit(true);
   }
 
-  agregarEventosAgenda(pId: any) {
-    this.idEvento.emit(pId);
+  async agregarEventosAgenda(pId: any) {
+    const response = await this.eventosService.addEvent(pId);
+    if (response.affectedRows) {
+      this.reload.emit(true);
+    }
   }
 
 }

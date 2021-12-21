@@ -37,10 +37,6 @@ export class LocalesService {
     return this.httpClient.post(`${this.baseUrl}/registro`, formValues, httpOptions).toPromise();
   }
 
-
-
-
-
   // AGREGAR EVENTO
   agregarEvento(newEvento: any): void {
     if (localStorage.getItem('eventos') === null) {

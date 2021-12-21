@@ -10,6 +10,7 @@ import { Evento } from '../interface/evento.interface';
 export class MapaComponent implements OnInit {
 
   @Input() idEvento: number;
+  @Input() reload: any;
 
   lat: number;
   lng: number;
@@ -37,9 +38,19 @@ export class MapaComponent implements OnInit {
   }
 
   async ngOnChanges() {
-
     if (this.idEvento !== 0) {
       this.arrEventos = await this.eventosService.getEventById(this.idEvento);
+
+      this.arrEventos.map(async evento => {
+        let direccion = evento.localizacion;
+        let response = await this.eventosService.getLocation(direccion);
+        evento.latitud = response.results[0].geometry.location.lat;
+        evento.longitud = response.results[0].geometry.location.lng;
+      })
+    }
+
+    if (this.reload) {
+      this.arrEventos = await this.eventosService.getAllEvent();
 
       this.arrEventos.map(async evento => {
         let direccion = evento.localizacion;

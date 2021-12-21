@@ -3,27 +3,17 @@
         <thead>
             <tr class="hidden">
 
-                <th>Local</th>
-                <th>Evento</th>
+                <th>Nombre Evento</th>
+                <th>Fecha Evento</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Sala Even</td>
+            <tr *ngFor="let userevent of arrUserEvents">
                 <td>
-                    Drum and Bass
+                    {{userevent.nombre_evento}}
                 </td>
-            </tr>
-            <tr>
-                <td>Los Martínez</td>
                 <td>
-                    Flamenco
-                </td>
-            </tr>
-            <tr>
-                <td>Centro Andaluz de Arte Contemporáneo</td>
-                <td>
-                    Exposición
+                    {{userevent.fecha_evento}}
                 </td>
             </tr>
         </tbody>

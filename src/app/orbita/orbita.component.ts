@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { UserEvent } from '../interface/user_event.interface';
+import { UsuariosService } from '../usuarios.service';
 
 @Component({
   selector: 'app-orbita',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orbita.component.css']
 })
 export class OrbitaComponent implements OnInit {
+  @Input() reload: any;
 
-  constructor() { }
+  arrUserEvents: UserEvent[];
 
-  ngOnInit(): void {
+  constructor(private usuariosService: UsuariosService) {
+    this.arrUserEvents = [];
+  }
+
+  async ngOnInit() {
+    this.arrUserEvents = await this.usuariosService.getUserEvent()
+  }
+
+  async ngOnChanges() {
+    if (this.reload) {
+      this.arrUserEvents = await this.usuariosService.getUserEvent()
+    }
   }
 
 }
