@@ -38,26 +38,14 @@ export class LocalesService {
   }
 
   // AGREGAR EVENTO
-  agregarEvento(newEvento: any): void {
-    if (localStorage.getItem('eventos') === null) {
-      this.arrEventos.push(newEvento);
-      localStorage.setItem('eventos', JSON.stringify(this.arrEventos));
-    } else {
-      this.arrEventos = JSON.parse(localStorage.getItem('eventos') || '');
-      this.arrEventos.push(newEvento);
-      localStorage.setItem('eventos', JSON.stringify(this.arrEventos))
+  agregarEvento(newEvento: any): Promise<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': localStorage.getItem('local_token')!
+      })
     }
-
-    // this.arrEventos.push(newEvento);
-    console.log(this.arrEventos);
+    return this.httpClient.post<any>(`${this.baseUrl}/perfilLocal`, newEvento, httpOptions).toPromise();
   }
-
-  // TODOS LOS EVENTOS
-  getAllEventos(): Promise<Evento[]> {
-    return new Promise((resolve, reject) => {
-      resolve(JSON.parse(localStorage.getItem('eventos') || ''));
-    })
-  }
-
 
 }

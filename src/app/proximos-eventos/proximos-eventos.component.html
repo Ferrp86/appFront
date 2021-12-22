@@ -8,23 +8,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-
-                <td>01/01/2022</td>
+            <tr *ngFor="let evento of arrEventos">
                 <td>
-                    Drum and Bass
+                    {{evento.fecha_evento}}
                 </td>
-            </tr>
-            <tr>
-                <td>14/03/2022</td>
                 <td>
-                    Flamenco
-                </td>
-            </tr>
-            <tr>
-                <td>28/04/2022</td>
-                <td>
-                    Concierto de rock
+                    {{evento.nombre_evento}}
                 </td>
             </tr>
         </tbody>

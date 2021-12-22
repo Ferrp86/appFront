@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EventosService } from '../eventos.service';
+
+import { Evento } from '../interface/evento.interface';
 
 @Component({
   selector: 'app-proximos-eventos',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProximosEventosComponent implements OnInit {
 
-  constructor() { }
+  arrEventos: Evento[];
 
-  ngOnInit(): void {
+  constructor(private eventosService: EventosService) {
+    this.arrEventos = [];
+  }
+
+  async ngOnInit() {
+    this.arrEventos = await this.eventosService.getEventByToken();
+    console.log(this.arrEventos);
   }
 
 }
