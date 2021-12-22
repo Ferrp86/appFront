@@ -3,7 +3,7 @@
 
 /* CONTENEDOR PRINCIPAL */
 .containerPerfil{
-    background-image: url(../../assets/IMAGENES/minimalism-space-stars-wallpaper-preview.jpg);
+    background-image: url(../../assets/IMAGENES/bg.jpg);
     height: 100vh;
 
 }
@@ -12,7 +12,6 @@
 /* CONTENEDOR USUARIO */
 
 .perfilLocal{
-    background-image: url(../../assets/IMAGENES/minimalism-space-stars-wallpaper-preview.jpg);
     color: white;
     width: 50%;
     margin-right: 40px;
@@ -139,7 +138,6 @@
 /* CONTENEDOR EVENTOS */
 
 .containerEventos{
-    background-image: url(../../assets/IMAGENES/minimalism-space-stars-wallpaper-preview.jpg);
     color: white;
     /* border: 3px solid white; */
     z-index: 1;
