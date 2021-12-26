@@ -3,7 +3,8 @@
 
 /* CONTENEDOR PRINCIPAL */
 .containerPerfil{
-    background-image: url(../../assets/IMAGENES/bg.jpg);
+    /* background-image: url(../../assets/IMAGENES/bg.jpg); */
+    background-color: black;
     height: 100vh;
 
 }
@@ -16,7 +17,8 @@
     width: 50%;
     margin-right: 40px;
     margin-left: -60px;
-    /* border: 3px solid white; */
+    border: 3px solid white;
+    border-radius: 20px;
     z-index: 1;
     /* padding-bottom: 40px; */
 
@@ -28,6 +30,7 @@
 }
 
 .nombre>h2{
+ 
     color: white;
     text-align: center;
     padding: 10px;
@@ -38,8 +41,11 @@
     margin: 0px auto;
     width: 200px;
     height: 200px;
-    background-color: white;
     color: black;
+}
+
+img{
+    max-width: 100%;
 }
 
 .panel{
@@ -139,7 +145,8 @@
 
 .containerEventos{
     color: white;
-    /* border: 3px solid white; */
+    border: 3px solid white;
+    border-radius: 20px;
     z-index: 1;
     /* padding-bottom: 40px; */
     width: 50%;
